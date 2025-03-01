@@ -1,11 +1,12 @@
 #include<stdio.h>
 int main()
 {
-	int a, int b;
-	if(a<b);
+	int a,b;
+	if(a<b){
 	printf("%d",a);
-	else
+	}
+	else{
 		printf("%d",b);
-
+	}
 
 }
