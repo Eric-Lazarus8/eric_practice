@@ -240,35 +240,8 @@ typedef void _IO_lock_t;
 
 
 
-#include<stdio.h>
-int main()
+struct _IO_FILE
 {
- int a,n,bit ;
- printf("enter the value of a and bit\n");
-scanf("%d%d",&a,&bit);
-n = a^(1<<bit);
-printf("bit swap of %d is %d\n",bit,n);
-return 0;
-#include<stdio.h>
-int main()
-{
- int a,n,bit ;
- printf("enter the value of a and bit\n");
-scanf("%d%d",&a,&bit);
-n = a^(1<<bit);
-printf("bit swap of %d is %d\n",bit,n);
-return 0;
-}}struct _IO_FILE
-#include<stdio.h>
-int main()
-{
- int a,n,bit ;
- printf("enter the value of a and bit\n");
-scanf("%d%d",&a,&bit);
-n = a^(1<<bit);
-printf("bit swap of %d is %d\n",bit,n);
-return 0;
-}{
   int _flags;
 
 
