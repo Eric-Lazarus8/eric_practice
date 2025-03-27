@@ -6,5 +6,5 @@ int main(){
     a = a^b;
     b = b^a;
     a = a^b;
-    printf("swap after a and b : %d %d\n",a,b);
+    printf("swap after a and b : %d %d\n",a,b);vim
 }
