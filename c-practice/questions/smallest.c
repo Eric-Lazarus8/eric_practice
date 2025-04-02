@@ -10,13 +10,14 @@ int main(){
         scanf("%d",&a[i]);
     }
     int smallest = a[0];
-    int sec_smallest = a[0];
+    int sec_smallest = a[1];
     for(i=1;i<n;i++)
     {
         if(a[i]<smallest){
+            //sec_smallest=smallest;
             smallest = a[i];
         }
-        if((a[i]<sec_smallest)&&a[i]>smallest)
+        if((a[i]<sec_smallest)&&(a[i]>smallest))
         {
             sec_smallest = a[i];
 
