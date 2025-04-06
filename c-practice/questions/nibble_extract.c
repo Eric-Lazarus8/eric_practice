@@ -6,5 +6,5 @@ int main(){
     num = ((n>>8)&0xf);
    /// num = n&(0x0f00);
    // num = num>>8;
-    printf("number%x\n",num);
+    printf("number:%x\n",num);
 }
