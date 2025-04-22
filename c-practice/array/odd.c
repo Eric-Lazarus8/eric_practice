@@ -17,9 +17,7 @@ int main(){
                 {
                  even[i]=a[i];
                 printf("%d\t",a[i]);
-	
                 }
-		
         }printf("\n");
       	printf("odd numbers are:");
 	for(i=0;i<n;i++)
