@@ -10,7 +10,7 @@ int main()
     {
         length++;
     }
-    for(i=0;i<length;i++)
+    for(i<length;i=0;i--)
     {
         a=str[i];
         str[i]=str[length-i-1];
