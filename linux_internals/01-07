@@ -1,0 +1,48 @@
+Date :- 01/07
+*********************************************************************************************************************************************
+Libraries -> cd /,cd usr/lib/x86_64-linux-gnu
+**************************************************
+"libmra" -> Third party library
+* Helps the programmer not to start from the scratch
+**********************************************************
+@man du
+@du -h binaryfile -->  shows size of the file
+**********************************************************
+*file binaryfile -> check
+*man arch
+*man gcc -> check
+******************************************************
+@ gcc -g .c file -o binary  --> du -h binary
+@ gcc .c -static -o binary  """"""""""""""""  'size increases'       //  change name if you use for the same files
+***********************************************************************************************************
+Steps to follow to build Library
+---------------------------------
+1 step I-> Implement the lib source
+
+2 step-II->compile and generte the object files
+           [gcc-c .c for .o]
+
+3 step III->use archiev tool to build static library
+            [ar -rcs libfilename.a .o]
+4 step IV->implement header as per library depends
+            [gcc .c -o binaryfile  libfilename.a]
+5 step V- implement test application, to test the third party library
+
+******************************************************************************************************************
+dynamic lib(*.so)->
+
+step I and step Iv same
+
+step-II->compile and generte the object files
+ 
+   gcc-c-fpic add.c sub.c multi.c (for multi.o)
+
+step III->use archiev tool to build Dynamic library
+
+   gcc - shared -o libarith.so.1 add.o sub.o multi.o
+
+version number-libarith.so.1,version 1
+
+
+
+
