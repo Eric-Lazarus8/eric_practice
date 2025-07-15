@@ -1,8 +1,10 @@
-#include<stdio.h>
-float div(int a,int b)
-{
-	if(b!=0)
-	{
-		return (float)a/b;
-	}return 0;
+#include <stdio.h>
+
+int divide(int a, int b) {
+    if (b == 0) {
+        printf("Error: Division by zero!\n");
+        return 0;
+    }
+    return a / b;
 }
+
