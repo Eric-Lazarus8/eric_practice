@@ -6,7 +6,9 @@ int subb(int, int);
 int mul(int, int);
 int divide(int, int);
 
+
 int main() {
+	int x;
     int choice, a, b, num;
 
     while (1) {
