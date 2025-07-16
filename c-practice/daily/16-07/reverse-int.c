@@ -2,14 +2,15 @@
 
 int main()
 {
-	int n,a,b,c;
+	int n,res=0;
 	printf("enter the number:");
 	scanf("%d",&n);
-	a = n>>2;
-	b = n<<2;
-	c = a & b;
-	 printf("%d\n",a);
-	  printf("%d\n",b);
-	printf("%d\n",c);
+	for(int i=0;i<4;i++)
+	{
+		res = res<<1;
+		res |= (n&1);
+		n >>= 1;
+	}
+	printf("%d\n",res);
 	return 0;
 }
