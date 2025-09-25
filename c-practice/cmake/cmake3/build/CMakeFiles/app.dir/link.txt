@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/app.dir/fun/app.c.o CMakeFiles/app.dir/fun/ssb.c.o CMakeFiles/app.dir/fun/mml.c.o CMakeFiles/app.dir/src/main.c.o  -o app 

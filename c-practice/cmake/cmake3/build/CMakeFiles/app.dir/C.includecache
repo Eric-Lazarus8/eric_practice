@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dzo/eric_practice/c-practice/cmake/cmake3/fun/app.c
+
+/home/dzo/eric_practice/c-practice/cmake/cmake3/fun/mml.c
+
+/home/dzo/eric_practice/c-practice/cmake/cmake3/fun/ssb.c
+
+/home/dzo/eric_practice/c-practice/cmake/cmake3/src/main.c
+stdio.h
+-
+math.h
+/home/dzo/eric_practice/c-practice/cmake/cmake3/src/math.h
+

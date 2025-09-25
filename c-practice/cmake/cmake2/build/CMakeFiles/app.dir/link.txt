@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/app.dir/test/app.c.o CMakeFiles/app.dir/src/add.c.o  -o app 

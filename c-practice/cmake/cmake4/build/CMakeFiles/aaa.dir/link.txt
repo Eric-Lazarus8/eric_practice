@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/aaa.dir/src/main.c.o CMakeFiles/aaa.dir/fun/ad.c.o CMakeFiles/aaa.dir/fun/su.c.o CMakeFiles/aaa.dir/fun/mu.c.o  -o aaa 
