@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/fork_execl.dir/home/dzo/eric_practice/linux_internals/execl/fork_execl.c.o  -o fork_execl 
