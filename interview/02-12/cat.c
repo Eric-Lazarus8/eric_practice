@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void my_strcat(char dest[],char src)
+void my_strcat(char dest[],char src[])
 {
 	int i = 0;
 	while(dest[i]!='\0')
@@ -15,5 +15,13 @@ void my_strcat(char dest[],char src)
 		i++;
 	}
 	dest[i]='\0';
+}
+int main()
+{
+	char src[]="Hello";
+	char dest[20]="world";
+	my_strcat(dest,src);
+	printf("%s",dest);
+	printf("\n");
 }
 
