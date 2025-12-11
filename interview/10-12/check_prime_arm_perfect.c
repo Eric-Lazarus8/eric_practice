@@ -36,3 +36,39 @@ int armstrong(int n)
 	}
 	return 0;
 }
+int check_perfect(int n)
+{
+	int sum=0;
+	for(int i=1;i<n;i++)
+	{
+		if(n%i==0)
+		{
+			sum += i;
+		}
+	}
+		if(n==sum)
+		{
+			return 1;
+		}else
+			return 0;
+	
+}
+int main()
+{
+	int n;
+	printf("enter number:");
+	scanf("%d",&n);
+
+	if(checkPrime(n))
+		printf("\"%d\"is prime number\n",n);
+	else
+		printf("\"%d\"is not prime number\n",n);
+	 if(armstrong(n))
+                printf("\"%d\" is armstrong number\n",n);
+        else
+                printf("\"%d\" is not armstrong number\n",n);
+	 if(check_perfect(n))
+                printf("\"%d\" is perfect number\n",n);
+        else
+                printf("\"%d\" is not perfect number\n",n);
+}
