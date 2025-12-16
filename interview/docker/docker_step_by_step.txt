@@ -1,0 +1,152 @@
+Docker + C Program: Step-by-Step Guide with Explanation
+.......................................................
+1. Install Docker (Ubuntu)
+--------------------------
+Purpose: Install Docker Engine so we can run containers.
+--------------------------------------------------------
+
+sudo apt update
+
+Updates package list.
+---------------------
+
+sudo apt install -y ca-certificates curl gnupg lsb-release
+
+Installs required tools for adding Docker repository.
+---------------------------------------------------
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
+
+Adds Docker’s official GPG key.
+-------------------------------
+
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+Adds Docker repository.
+-----------------------
+
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+Installs Docker engine.
+-----------------------
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+Starts Docker and enables it on boot.
+-------------------------------------
+2. Allow normal user to run Docker
+----------------------------------
+Purpose: Run Docker without sudo.
+         ------------------------
+
+sudo usermod -aG docker $USER
+
+
+Adds current user to docker group.
+----------------------------------
+Logout and login again.
+
+groups
+
+Verify docker group is listed.
+------------------------------
+docker run hello-world
+
+Test Docker installation.
+---------------------------------
+3. Run Ubuntu container
+-------------------------
+Purpose: Start a fresh Ubuntu 20.04 environment inside Docker.
+         -----------------------------------------------------
+docker run -it ubuntu:20.04 /bin/bash
+
+Starts Ubuntu container in interactive mode.
+--------------------------------------------
+You enter as root by default.
+-----------------------------
+4. Install tools inside container
+---------------------------------
+Purpose: Install compiler and editor inside container.
+-----------------------------------------------------
+apt update
+apt install -y gcc nano
+
+Installs GCC compiler and nano editor.
+--------------------------------------
+5. Create normal user inside container
+--------------------------------------
+Purpose: Avoid working as root inside container.
+------------------------------------------------
+
+useradd -m dzo
+
+Creates user dzo with home directory.
+-------------------------------------
+passwd dzo
+
+Sets password for user.
+-----------------------
+6. Switch to normal user
+------------------------
+Purpose: Work as non-root user.
+-------------------------------
+su - dzo
+
+Switches to user dzo.
+---------------------
+whoami
+
+Confirms current user.
+----------------------
+7. Create C program
+-------------------
+Purpose: Write a simple C program.
+----------------------------------
+nano hello.c
+
+#include <stdio.h>
+int main(void)
+{
+    printf("Hello from Docker C program\n");
+    return 0;
+}
+
+Save and exit nano.
+-------------------
+8. Compile C program
+---------------------
+Purpose: Convert C source code into executable.
+-----------------------------------------------
+gcc hello.c -o hello
+
+Generates executable named hello.
+---------------------------------
+9. Run C program
+----------------
+Purpose: Execute compiled program.
+----------------------------------
+./hello
+
+Runs the program.
+-----------------
+10. Exit container
+------------------
+Purpose: Stop container and return to host.
+-------------------------------------------
+exit
+
+exit
+
+First exits user shell, second exits container.
+-----------------------------------------------
+Summary:
+.......
+Docker provides a clean Ubuntu environment.
+-------------------------------------------
+Root is used only for setup.
+----------------------------
+A normal user is used for coding.
+---------------------------------
+C program is compiled and run safely without affecting host.
+------------------------------------------------------------
